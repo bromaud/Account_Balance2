@@ -1,0 +1,41 @@
+version: "3.1"
+
+stories:
+
+#- story: account path
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: account_balance
+#  - action: utter_name
+#  - intent: tell_name
+#  - action: action_extract_name_entity
+#  - intent: tell_account_number
+#  - action: action_extract_account_number_entity
+#  - intent: tell_phone_number
+#  - action: action_extract_phone_number_entity
+#  - action: action_say_balance
+#  - action: utter_goodbye
+
+- story: greet path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: name path
+  steps:
+  - intent: account_balance
+  - action: utter_account_balance
+  - intent: my_name
+  - slot_was_set:
+    - callname
+  - action: utter_howmuch
+  - intent: my_account
+  - slot_was_set:
+    - howmuch
+  - action: utter_whatphone
+  - intent: my_phone
+  - slot_was_set:
+    - whatphone
+  - action: utter_namenum
+  - action: utter_goodbye

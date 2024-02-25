@@ -1,0 +1,111 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: account_balance
+  examples: |
+    - I need to know my account balance
+    - Tell me what my account balance is
+    - what is my current account number?
+    - How much money do i have left?
+    - Kindly help me check my account balance
+    - Can i know my account balance?
+    - It is urgent! i need to know how much i have left in my account?
+    - My account balance please
+    - Account balance
+    - balance
+    - Account
+    - Money i have left
+    - how rich am i?
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+ 
+
+- intent: my_name
+  examples: |
+    - My name is [Bright](name)
+    - They call me [Kelvin](name)
+    - My first name is [Arullapan](name)
+    - of course! my name is [Rohan](name)
+    - [Utkarsh](name)
+    - [John](name)
+    - [Chinedu](name)
+    - [Ganesha](name)
+    - [Deepak](name)
+    - [Janak](name)
+    - 
+
+- intent: my_account
+  examples: |
+    - My account number is [7123456789](account)
+    - [6136457111](account)
+    - [2136457222](account)
+    - [7136457347](account)
+    - [9136457299](account)
+    - [8136457555](account)
+    - My savings account number is [6547896540](account)
+
+- intent: my_phone
+  examples: |
+    - My phone number is [+1 403-645-000](phone)
+    - [+1 403-645-789](phone)
+    - [+1 403-345-789](phone)
+    - [+1 403-745-789](phone)
+    - [+1 403-600-789](phone)
+    - [+1 403-240-789](phone)
+    - [+1 403-225-789](phone)
+    - My personal phone number is [+1 403-645-555](phone)
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+#- intent: inform
+#  examples: |
+#    - My name is [Bright2](name)
+#    - They call me [Kelvin2](name)
+#    - My first name is [Arullapan2](name)
+#    - of course! my name is [Rohan2](name)
+#    - [Utkarsh2](name)
+#    - [John2](name)
+#    - [Chinedu2](name)
+#    - [Ganesha2](name)
+#    - [Deepak2](name)
+#    - [Janak2](name)
+#    - My account number is [7123456786](account_number)
+#    - [6136457116](account_number)
+#    - [2136457226](account_number)
+#    - [7136457346](account_number)
+#    - [9136457296](account_number)
+#    - [8136457556](account_number)

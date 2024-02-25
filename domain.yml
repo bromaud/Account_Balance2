@@ -1,0 +1,106 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - tell_time
+  - my_name
+  - my_age
+  - account_balance
+  - my_account
+  - my_phone
+
+entities:
+  - name
+  - account
+  - phone
+
+slots:
+  callname:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: name
+
+  howmuch:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: account
+
+  whatphone:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: phone
+
+
+
+#slots:
+#  name:
+#    type: text
+#    influence_conversation: false
+#    mappings:
+#    - type: from entity
+#      entity: name
+
+#  account_number:
+#    type: text
+#    influence_conversation: false
+#    mappings:
+#    - type: from entity
+#      entity: account_number
+
+
+
+
+
+
+
+
+
+responses:
+  utter_greet:
+  - text: "Hey Buddy! How can i help you today?"
+
+  utter_account_balance:
+  - text: "Sure! I can help with that, what is your name please?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_howmuch:
+  - text: "Thanks {callname}! I confirm your name is on my database, can i have your account number?"
+
+
+  utter_whatphone:
+  - text: "I confirm your account number {howmuch} tallies with your name on my database, can i have your phone number?"
+
+
+  utter_namenum:
+  - text: "Thank you for your patience! Dear {callname}, your account number : {howmuch} has a balance of Rs. 1000."
+
+
+
+#actions:
+#  - action_extract_name_entity
+#  - action_extract_account_number_entity
+#  - action_extract_phone_number_entity
+#  - action_say_balance
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
